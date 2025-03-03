@@ -8,23 +8,36 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
     <title>Doguinho's</title>
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#menu">
     <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-5 border-bottom sticky-top bg-light">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">                
-                <span class="fs-4 fw-bold"><span class="mdi mdi-dog"></span>Doguinho's</span>
+            <a href="./" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">                
+                <span class="text-primary fs-4 fw-bold"><span class="mdi mdi-dog"></span>Doguinho's</span>
             </a>
     
-            <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+            <ul id="menu" class="nav nav-pills">
+              <!-- Bootstrap 5 switch -->
+              <div class="form-check form-switch ms-auto mt-2 me-5">
+                <label id="icone-toggle" class="form-check-label ms-3" for="lightSwitch">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-moon-stars" viewBox="0 0 16 16">
+                        <path
+                            d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
+                        <path
+                            d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+                    </svg>
+                </label>
+                <input class="form-check-input" type="checkbox" id="lightSwitch" />
+            </div>
+                <li class="nav-item"><a href="#home" class="nav-link active" aria-current="page">Home</a></li>
                 <li class="nav-item"><a href="#servicos" class="nav-link">Serviços</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Preços</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a href="#precos" class="nav-link">Preços</a></li>
+                <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
             </ul>
         </header>
 
-        <section class="mb-5">
+        <section class="mb-5" id="home">
             <div class="row text-center text-md-start">
                 <div class="col-md-6 mt-3">
                     <h2 class="mt-5 fs-5">Aqui o seu amigo é trado com carinho</h2>
@@ -70,9 +83,9 @@
               </div>
         </section>
 
-        <section id="precos">
-            <div class="pricing-header pt-5 mt-5 text-center">
-                <h1 class="display-5 fw-bold">Preço</h1>
+        <section id="precos" class="pt-5 mt-5">
+            <div class="pricing-header text-center mt-5 pt-5">
+                <h1 class="display-5 fw-bold">Preços</h1>
                 <p class="fs-5 text-muted mb-5">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
               </div>
               <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
@@ -179,9 +192,39 @@
                 </div>
             </div>
         </section>
+        <section id="contato" class="py-5 my-5">
+          <div class="row pt-5 mt-5">
+            <div class="col-12 text-center">
+                <h2 class="display-5 fw-bold">Contato</h2>
+            </div>
+          </div>
+          <div class="row align-items-md-stretch text-center">
+            <div class="col-md-6">
+              <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+                <h2>Fale Conosco</h2>
+                <p class="p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam repudiandae, explicabo quidem consequatur iste unde ex doloribus dignissimos, obcaecati non enim nisi, in molestias libero corrupti quis impedit nam! Porro?</p>
+                <p class="mt-4"><i class="mdi mdi-phone"></i>(00) 00000 - 0000</p>
+                <p><i class="mdi mdi-email"></i>contato@doguinhos.com.br</p>
+                <button class="mt-4 w-75 p-3 btn btn-success" type="button"><i class="mdi mdi-whatsapp"></i>Chamar WhatsApp</button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+                
+                <p>Rua do Exemplo, 123 - Centro - Cidade - UF.</p>
+                <iframe class="m-0 m-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14640.413098876616!2d-47.49353174496607!3d-23.456738977398135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5f5a9089e7e91%3A0x101610d13ee905b1!2sShopping%20Cidade%20Sorocaba!5e0!3m2!1spt-BR!2sbr!4v1741040922339!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
 
+        <footer class="container mt-5 p-5">
+          <p class="float-end"><a href="#">Ir para o topo</a></p>
+          <p>© 2017–2024 <i class="mdi mdi-dog"></i>Doguinho's – Clínica Veterinária<a class="ms-5" href="#">Política de Privacidade</a> · <a href="#">Termos de Uso</a></p>
+        </footer>
       </div>
 
     <script src="../bootstrap/js/bootstrap.bundle.min.js.js"></script>
+    <script src="js/switch.js"></script>
 </body>
 </html>
